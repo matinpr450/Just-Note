@@ -1,0 +1,8 @@
+::-webkit-scrollbar {
+	background: linear-gradient(to top, lightcoral, wheat);
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: bisque;
+	border-radius: 5px;
+}

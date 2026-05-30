@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: cursive;
+	color: #444;
+	cursor: default;
+
+}
+::selection {
+	background-color: thistle;
+	text-shadow: 0 0 5px white;
+	color: black;
+}
+
+button {
+	border: 0;
+	outline: 0;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 24px;
+	cursor: pointer;
+
+	& * {
+		cursor: pointer;
+	}
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+}
+
+.app {
+	background: tan;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: 100vh;
+}
+
+.app__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border-bottom: 1px solid wheat;
+}
+
+.app__header-btn {
+	background-color: lightcyan;
+}
+
+.app__note-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	overflow-y: auto;
+}
+
+.note {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: bisque;
+	padding: 10px;
+	border-radius: 5px;
+	width: 90%;
+}
+
+.note__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid tan;
+	padding-bottom: 5px;
+}
+
+.note__remove-btn {
+	padding: 0px;
+	border-radius: 100em;
+	background-color: transparent;
+	cursor: pointer;
+
+	& * {
+		color: red;
+	}
+}
+
+.note__title {
+	all: unset;
+	font-size: 1.6em;
+	cursor: pointer;
+
+	&::before {
+		content: "~~> ";
+		font-style: italic;
+	}
+}
+
+.note__text {
+	background-color: wheat;
+	padding: 5px;
+	border-radius: 5px;
+}
